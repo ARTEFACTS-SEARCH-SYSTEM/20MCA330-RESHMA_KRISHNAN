@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BOOKS</title>
+    <style>
+      html {
+        padding: 0;
+        margin: 0;
+     }
+
+      body {
+        position: relative;
+        font-family: "Times New Roman", Times, serif;
+        width: 100%;
+        margin: 0;
+      }
+    </style>
+    </head>
+
+
+    <body>
+        <center>
+      <table border="1" align="center" cellspacing="0" cellpadding="25"
+        <tr>
+            <th>ID</th>
+            <th>COVER</th>
+            <th>NAME</th>
+            <th>AUTHOR</th>
+            <th>PRICE</th>
+           
+        </tr>
+        {{#each results}}
+            <tr>
+                <td>{{this.ID}}</td>
+                <div><td><img src="{{this.cover}}"width="300" height="300"/></td></div>
+                <td>{{this.Name}}</td>
+                <td>{{this.Author}}</td>
+                <td>{{this.Price}}</td>
+            </tr>
+        {{/each}}
+       </table>
+       </center>
+     </body>
+   </html>
