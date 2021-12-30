@@ -32,7 +32,7 @@ mysqlConn.connect((err) =>{
 var port = 3000;
 app.listen(port, ()=> console.log("REST API app listening at http://localhost:%s", port));
 
-//To List All Books in DB
+//To List All Books in Database
 app.get('/books', (req,res)=>{
 
     let query=mysqlConn.query('SELECT * FROM info',(err,rows,fields)=>{
