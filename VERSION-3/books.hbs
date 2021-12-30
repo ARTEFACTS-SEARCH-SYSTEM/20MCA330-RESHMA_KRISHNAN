@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Book Zone</title>
+    <style>
+      html {
+        padding: 0;
+        margin: 0;
+     }
+
+      body {
+ 
+        background-color: rgb(221, 247, 149);
+        position: relative;
+        font-family: "Times New Roman", Times, serif;
+        width: 100%;
+        margin: 0;
+      }
+      section-2 {
+        column-count: 3;
+
+      }
+    </style>
+    </head>
+
+
+    <body>
+      <br>
+    <form  align = "right" action="/category" id="author-form" method="POST">
+
+      <select name ="catinput" style="font-size:15px;" id ="dropDownId">
+          <option>Select Category</option>
+          <option value="action">Action and Adventure</option>
+          <option value="comics">Comics</option>
+          <option value="science">Science Fiction</option>
+          <option value="romance">Romance Novel</option>
+      </select>
+      <input class="SubmitButton" type="submit"  id="click" style="font-size:15px;" />
+    </form>
+
+    <form action ="/search"  align = "center" id="searchBook" method="POST">
+       <input style="font-size:15px;" type="text"  class="searchForm" name="searchinput" placeholder="Search by Author"> OR 
+       <input style="font-size:15px;" type="text"  class="searchForm" name="searchinput" placeholder="Search by Title">
+       <button style="font-size:15px" type ="submit">Search</button>
+
+    </form>
+    
+        <br>
+        
+     <div class="section-1">
+        <div class="Section-1-text">
+            <center><h1><i>Welcome to Reshma's Book Inventory</i></h1>  
+        </center>
+        </div>
+    </div>
+    <div class="section-2">
+        <h2>Available Books</h2>
+
+      <table width="50" border="0" cols="3" align="center" cellspacing="0" cellpadding="25"
+       <tr cols="3" align="center"></tr>
+        {{#each results}}
+        
+                <div>
+                  <td>
+                    <img src="{{this.Cover}}"width="150" height="150"/>
+                    <p>{{this.Name}}</p>
+                    <p>CATEGORY: {{this.Category}}</p>
+                    <p>AUTHOR: {{this.Author}}</p>
+                    <p>PRICE: {{this.Price}}</p>
+                  </td>
+                </div>
+            
+        {{/each}}
+        </tr>
+       </table>
+       </center>
+     </body>
+   </html>
