@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SEARCH BOOKS</title>
+    <style>
+      html {
+        padding: 0;
+        margin: 0;
+     }
+
+      body {
+ 
+        background-color: rgb(221, 247, 149);
+        position: relative;
+        font-family: "Times New Roman", Times, serif;
+        width: 100%;
+        margin: 0;
+      }
+    </style>
+    </head>
+
+
+    <body>
+ 
+    <div class="section-1">
+        <h2 align="center">Book Zone Search Results</h2>
+      <table border="0" align="center" cellspacing="0" cellpadding="25"
+       <tr align="center"></tr>
+        {{#each results}}
+                <div>
+                  <td>
+                    <img src="{{this.Cover}}"width="200" height="200"/>
+                    <p>{{this.Name}}</p>
+                    <p>CATEGORY: {{this.Category}}</p>
+                    <p>AUTHOR: {{this.Author}}</p>
+                    <p>PRICE: {{this.Price}}</p>
+                  </td>
+                </div>
+            
+        {{/each}}
+        </tr>
+       </table>
+       </center>
+     </body>
+   </html>
