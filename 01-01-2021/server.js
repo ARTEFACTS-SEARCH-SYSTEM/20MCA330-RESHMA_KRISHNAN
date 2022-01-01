@@ -5,7 +5,7 @@ const fs = require('fs');
 var app = express();
 const bp = require('body-parser');
 const { NULL } = require('mysql/lib/protocol/constants/types');
-//var sqlite3 = require('sqlite3').verbose();
+
 
 app.use(bp.json());
 // parse application/x-www-form-urlencoded
@@ -20,7 +20,7 @@ var mysqlConn = mysql.createConnection({
     debug: false,
     multipleStatements : true
 });
-//var db = new sqlite3.Database('books');
+
 
 mysqlConn.connect((err) =>{
     if(!err){
