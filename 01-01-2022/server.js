@@ -99,7 +99,6 @@ app.post('/search', function(req,res){
           const template = fs.readFileSync("./search.hbs", "utf8");
           const html = handlebars.compile(template)(data);
           res.send(html);
-          console.log(rows);
           console.log("Entry displayed successfully");
       }
     })
